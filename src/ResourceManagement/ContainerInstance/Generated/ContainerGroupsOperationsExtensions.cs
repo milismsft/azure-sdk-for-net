@@ -28,17 +28,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IPage<ContainerGroupInner> List(this IContainerGroupsOperations operations)
-            {
-                return operations.ListAsync().GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Get the list of container groups in a given subscription.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
@@ -59,20 +48,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
             /// <param name='resourceGroupName'>
             /// Azure resource group name
             /// </param>
-            public static IPage<ContainerGroupInner> ListByResourceGroup(this IContainerGroupsOperations operations, string resourceGroupName)
-            {
-                return operations.ListByResourceGroupAsync(resourceGroupName).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Get the list of container groups in a given resource group.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='resourceGroupName'>
-            /// Azure resource group name
-            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
@@ -82,23 +57,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
                 {
                     return _result.Body;
                 }
-            }
-
-            /// <summary>
-            /// Get details for this container group.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='resourceGroupName'>
-            /// Azure resource group name
-            /// </param>
-            /// <param name='containerGroupName'>
-            /// Container group name
-            /// </param>
-            public static ContainerGroupInner Get(this IContainerGroupsOperations operations, string resourceGroupName, string containerGroupName)
-            {
-                return operations.GetAsync(resourceGroupName, containerGroupName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -139,26 +97,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
             /// <param name='containerGroup'>
             /// Definition of the container to be created.
             /// </param>
-            public static ContainerGroupInner CreateOrUpdate(this IContainerGroupsOperations operations, string resourceGroupName, string containerGroupName, ContainerGroupInner containerGroup)
-            {
-                return operations.CreateOrUpdateAsync(resourceGroupName, containerGroupName, containerGroup).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Create or update container groups.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='resourceGroupName'>
-            /// Azure resource group name
-            /// </param>
-            /// <param name='containerGroupName'>
-            /// Container group name
-            /// </param>
-            /// <param name='containerGroup'>
-            /// Definition of the container to be created.
-            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
@@ -168,23 +106,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
                 {
                     return _result.Body;
                 }
-            }
-
-            /// <summary>
-            /// Delete container groups.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='resourceGroupName'>
-            /// Azure resource group name
-            /// </param>
-            /// <param name='containerGroupName'>
-            /// Name of the container group to be deleted
-            /// </param>
-            public static ContainerGroupInner Delete(this IContainerGroupsOperations operations, string resourceGroupName, string containerGroupName)
-            {
-                return operations.DeleteAsync(resourceGroupName, containerGroupName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -219,20 +140,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
             /// <param name='nextPageLink'>
             /// The NextLink from the previous successful call to List operation.
             /// </param>
-            public static IPage<ContainerGroupInner> ListNext(this IContainerGroupsOperations operations, string nextPageLink)
-            {
-                return operations.ListNextAsync(nextPageLink).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Get the list of container groups in a given subscription.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='nextPageLink'>
-            /// The NextLink from the previous successful call to List operation.
-            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
@@ -242,20 +149,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
                 {
                     return _result.Body;
                 }
-            }
-
-            /// <summary>
-            /// Get the list of container groups in a given resource group.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='nextPageLink'>
-            /// The NextLink from the previous successful call to List operation.
-            /// </param>
-            public static IPage<ContainerGroupInner> ListByResourceGroupNext(this IContainerGroupsOperations operations, string nextPageLink)
-            {
-                return operations.ListByResourceGroupNextAsync(nextPageLink).GetAwaiter().GetResult();
             }
 
             /// <summary>

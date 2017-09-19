@@ -40,7 +40,7 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
         /// <summary>
         /// Gets the UDP ports publicly exposed for this container group.
         /// </summary>
-        int ExternalUdpPorts { get; }
+        int[] ExternalUdpPorts { get; }
 
         /// <summary>
         /// Gets the provisioningState of the container group.
@@ -50,7 +50,7 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
         /// <summary>
         /// Gets the TCP ports publicly exposed for this container group.
         /// </summary>
-        int ExternalTcpPorts { get; }
+        int[] ExternalTcpPorts { get; }
 
         /// <summary>
         /// Gets `always` Always restart.

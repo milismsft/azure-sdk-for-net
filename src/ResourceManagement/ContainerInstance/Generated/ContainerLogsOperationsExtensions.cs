@@ -41,30 +41,6 @@ namespace Microsoft.Azure.Management.ContainerInstance.Fluent
             /// Only show this number of log lines. If not provided, all available logs are
             /// shown.
             /// </param>
-            public static LogsInner List(this IContainerLogsOperations operations, string resourceGroupName, string containerName, string containerGroupName, int? tail = default(int?))
-            {
-                return operations.ListAsync(resourceGroupName, containerName, containerGroupName, tail).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Get the logs for this container.
-            /// </summary>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='resourceGroupName'>
-            /// Azure resource group name
-            /// </param>
-            /// <param name='containerName'>
-            /// Container name
-            /// </param>
-            /// <param name='containerGroupName'>
-            /// Container group name
-            /// </param>
-            /// <param name='tail'>
-            /// Only show this number of log lines. If not provided, all available logs are
-            /// shown.
-            /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
